@@ -10,36 +10,142 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            text-align: center;
+            text-align: left;
         }
         .container {
-            max-width: 800px;
+            max-width: 90%; /* Cambié el max-width para que sea más adaptable */
             margin: 50px auto;
             padding: 20px;
             background: white;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             border-radius: 10px;
+            overflow: hidden; /* Cambio de overflow para evitar problemas con el contenido */
         }
         h1 {
             color: #333;
+            font-size: 28px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            font-size: 18px;
+            text-align: center;
         }
         p {
             color: #666;
             line-height: 1.6;
+            font-size: 18px;
+            word-wrap: break-word; /* Para evitar el desbordamiento de texto */
+            margin-bottom: 20px; /* Espaciado entre párrafos */
+        }
+        .centered-text {
+            text-align: center;  /* Centra el texto */
+            font-size: 20px;      /* Tamaño de la fuente */
+            color: #333;          /* Color del texto */
         }
         img {
-            max-width: 100%;
+            /* max-width: 100%;*/
+            width: 200px;
             height: auto;
             margin-top: 20px;
+            display: inline-block;
+        
+        }
+        .image-container {
+            text-align: center; /* Centra las imágenes */
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            /*text-decoration-style: wavy;*/
+            color: #0078FF;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: justify;
+            gap: 5px;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        .icono {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Media Queries para mejorar la responsividad */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Título de la Página</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
-        <img src="imagen.jpg" alt="Imagen de ejemplo">
-        <p>Otro párrafo con información adicional sobre el tema tratado en la página.</p>
+        <h1>Información acerca del estudio</h1> 
+        <div class="image-container">
+             <img src="sensebeat_logo.png" alt="Logo del proyecto">
+        </div>
+
+        <h2><strong>Información sobre el estudio. </strong><br></h2>
+            <p>Nos gustaría invitarle a participar en este estudio, desarrollado dentro del marco del proyecto de investigación SENSEBEAT-DS de la Universidad Carlos III de Madrid, que está financiado por la Agencia Estatal de Investigación (AEI) dentro del Programa Estatal de Proyectos de Generación de Conocimiento 2023. <br>
+            El título completo del proyecto es “Evaluación de la sensorialidad y la percepción corporal en la sintomatología depresiva” (SENSEBEAT-DS)”. Solo debe participar si quiere. Elegir no tomar parte no tendrá ninguna repercusión para usted. La decisión de no participar no perjudicará en modo alguno su progreso académico. <br>
+            Antes de decidir si desea participar, es importante que lea cuidadosamente la siguiente información y la discuta con otras personas si lo desea. Pregúntenos (<a href="mailto:ineferna@inf.uc3m.es">Envía un correo a ineferna@inf.uc3m.es</a>) si hay algo que no está claro o si desea más información. <br>
+            Esta investigación ha sido aprobada por el Comité de Ética en Investigación de la Universidad Carlos III de Madrid.        </p>
+        <div class="image-container">
+            <img src="logouc3m.png" alt="Logo de la institucion">
+            <img src="Logo AEI-blanco_0.png" alt="Logo del funding">
+            <img src="I_mBODYlab_logo.png" alt="Logo del grupo">
+        </div>
+        <p> Con esta investigación queremos estudiar los patrones sensoriales y la percepción corporal de las personas en relación con síntomas depresivos, así como la influencia que tiene la estimulación sensorial (por ejemplo, el sonido o el tacto) en la percepción del cuerpo, la interacción y la emoción de las personas. <br>
+            Esta investigación podría informar el desarrollo de tecnología para mejorar la salud de las personas. 
+        </p>
+        <p class="centered-text">
+            <a href="https://imbodylab.com/2024/11/20/sensebeat-ds/" target="_blank" title="Pagina web estudio">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" alt="Ícono de enlace" class="icono">
+                Haz clic para visitar la página web de SENSEBEAT-DS!
+            </a>
+        </p>
+        <p>Con este objetivo, a aquellas personas que decidan participar podremos pedirles que hagan determinados movimientos, ejercicios físicos simples (por ejemplo, caminar o hacer sentadillas) o actividades cotidianas mientras llevan puestos sensores de movimiento, biosensores u otros dispositivos como teléfonos inteligentes que monitoricen sus movimientos, sus patrones de sueño y otras actividades. También podrá recibir retroalimentación sensorial, como sonido o vibraciones al hacer estas actividades.  Las actividades se registrarán utilizando los sensores y/o por grabación de imagen / audio. Podríamos pedirle que comente en alto sus pensamientos o ideas durante la realización de estas actividades o que rellene unos mapas corporales sobre sus sensaciones. También le pediremos que complete cuestionarios relacionados con sus sensaciones durante el estudio, cuestionarios demográficos o relacionados con sus hábitos de salud (por ejemplo, que evalúen la severidad de los síntomas depresivos) y con variables psicológicas. En los estudios podremos pedir su opinión sobre los prototipos que hemos desarrollado, sus experiencias durante el estudio y/o las necesidades y usos de dicha tecnología, o realizar entrevistas clínicas sobre sus hábitos de salud.
+        </p>
+        <p>
+            Cada sesión del estudio tendrá una duración máxima de 1 hora y media. <br>
+            Los datos obtenidos a partir de las pruebas realizadas, podrán ser publicados en revistas científicas, así como presentados a congresos, conferencias u otros eventos relacionados con la investigación.  <br>
+            Con su permiso, también nos gustaría utilizar extractos de las grabaciones de imágenes y audio para la enseñanza, conferencias, presentaciones, publicaciones y / o trabajo de tesis. Se evitará que pueda ser identificado mediante el uso de herramientas de pixelación y/o de distorsión de voz. Tenga en cuenta que estas presentaciones pueden ser registradas por personas sin nuestro conocimiento y mostradas en las redes sociales.
+
+        </p>
+        <h2><strong> ¿Qué implica la participación? </strong><br></h2>
+        <p>
+            Por un lado, esperamos que las personas que decidan participar realicen las tareas teniendo en cuenta las indicaciones dadas. 
+            <br>La participación en este estudio es completamente voluntaria, pudiendo retirarse una vez haya firmado el consentimiento de participación, e incluso aunque ya haya comenzado la participación en el mismo. 
+            <br>Esta investigación no implica riesgo de ningún tipo para usted. Los ejercicios físicos serán ejercicios sencillos que implican actividad física de nivel bajo o moderado y le daremos la posibilidad de descansar si lo necesita. Los sensores usados están disponibles comercialmente y su uso, así como la estimulación sensorial no implicará molestia o riesgo para su salud. Como resultado de la estimulación sensorial, podría experimentar un cambio en su estado emocional. Si este cambio le ocasionará cierto estrés podrá indicárnoslo y el experimento se detendrá inmediatamente.
+            <br>Recibirá una compensación de 10 euros por cada hora de participación. Además, se espera que este trabajo informe la investigación futura y contribuya al desarrollo de tecnologías avanzadas para mejorar la salud de las personas.
+            <br>Todos los datos de carácter personal, obtenidos en este estudio son confidenciales y se tratarán conforme al Reglamento General de Protección de Datos. 
+            <br>Si decide dar el consentimiento para que podamos contar con usted, tiene que firmar el documento de Consentimiento Informado. Podrá revocar dicho consentimiento en cualquier momento.
+        </p>
+        <h2><strong>¿Te interesa participar?</strong></h2>
+        <p class="centered-text">
+            <a href="https://forms.gle/dki8gFU2ep7zVfQ56" target="_blank" title="Pagina web exclusion">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" alt="Ícono de enlace" class="icono">
+                Haz clic para acceder al cuestionario de inclusión/exclusión del estudio!
+            </a>
+            <br>Según tu resultado, contactaremos contigo para participar en el experimento. ¡Gracias!
+        </p>
+        
     </div>
 </body>
 </html>
